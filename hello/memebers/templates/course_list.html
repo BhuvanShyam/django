@@ -1,0 +1,9 @@
+<h1>Courses</h1>
+<ul>
+    {% for course in courses %}
+    <li>
+        <a href="{% url 'student_list' course.id %}">{{ course.name }}</a>
+        - <a href="{% url 'enroll_student' course.id %}">Enroll Student</a>
+    </li>
+    {% endfor %}
+</ul>
